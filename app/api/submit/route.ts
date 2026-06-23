@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
       to: [process.env.RECIPIENT_EMAIL!],
-      replyTo: clientEmail || undefined,
+      reply_to: clientEmail || undefined,
       subject: `New Website Project — ${businessName}`,
       html,
     });
