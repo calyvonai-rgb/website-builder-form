@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    background-color: #FAF8F5;
+  }
+
+  /* Smooth scrolling for review screen */
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  /* Remove number input arrows */
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+  .font-sans {
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+}
